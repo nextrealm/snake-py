@@ -14,24 +14,24 @@ food = [random.randint(1, self.sizeX)]
 
 clock = pygame.time.Clock()
 
-def move(piece)
+def move(piece):
     if direction == 1: piece[0] += 1
     elif direction == 2: piece[1] += 1
     elif direction == 3: piece[0] -= 1
     elif direction == 4: piece[1] -= 1
 
-def check(piece)
-    if piece[0] == food[0] && piece[1] == food[1]: return true
+def check(piece):
+    if piece[0] == food[0] and piece[1] == food[1]: return true
     return false
 
-def point(new_direction)
-    if direction == 1 && new_direction == 3: return
-    if direction == 3 && new_direction == 1: return
-    if direction == 2 && new_direction == 4: return
-    if direction == 4 && new_direction == 2: return
+def point(new_direction):
+    if direction == 1 and new_direction == 3: return
+    if direction == 3 and new_direction == 1: return
+    if direction == 2 and new_direction == 4: return
+    if direction == 4 and new_direction == 2: return
     direction = new_direction
 
-while true
+while true:
     pygame.event.pump()
     keys = pygame.key.get_pressed() 
     if (keys[K_RIGHT]):
